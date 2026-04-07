@@ -1,8 +1,8 @@
-import { FaUser, FaLock, FaIdCard, FaUsers } from 'react-icons/fa'
+import { FaUser, FaLock, FaIdCard } from "react-icons/fa"
 import { useState } from "react"
 import "./register.css"
-import api from '../../services/api'
-import { useNavigate } from 'react-router-dom'
+import api from "../../services/api"
+import { useNavigate } from "react-router-dom"
 
 const Register = () => {
     const navigate = useNavigate()
@@ -20,27 +20,27 @@ const Register = () => {
         }
     }
 
-  return (
-    <div className='container'>
-      <form onSubmit={handleSubmit}>
-        <h1>Cadastre sua conta</h1>
-        <div className='input-field'>
-            <input type="text" placeholder='Nome' onChange={(e) => setName(e.target.value)}/>
-            <FaIdCard className='icon'/>
-        </div>
-        <div className='input-field'>
-            <input type="text" placeholder='Usuário' onChange={(e) => setUsername(e.target.value)} />
-            <FaUser className='icon' />
-        </div>
-        <div className='input-field'>
-            <input type="password" placeholder='Senha' onChange={(e) => setPassword(e.target.value)}/>
-            <FaLock className='icon' />
-        </div>
+    return (
+        <div className='container'>
+            <form onSubmit={handleSubmit}>
+                <h1>Cadastre sua conta</h1>
+                <div className='input-field'>
+                    <input type="text" placeholder='Nome' onChange={(e) => setName(e.target.value)} />
+                    <FaIdCard className='icon' />
+                </div>
+                <div className='input-field'>
+                    <input type="text" placeholder='Usuário' onChange={(e) => setUsername(e.target.value)} />
+                    <FaUser className='icon' />
+                </div>
+                <div className='input-field'>
+                    <input type="password" placeholder='Senha' onChange={(e) => setPassword(e.target.value)} />
+                    <FaLock className='icon' />
+                </div>
 
-        <button>Criar Conta</button>
-      </form>
-    </div>
-  )
+                <button>Criar Conta</button>
+            </form>
+        </div>
+    )
 }
 
 export default Register

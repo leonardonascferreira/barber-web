@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100vw;
+    max-width: 480px;
+    padding: 32px 20px 60px;
+}
+
+.container h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 0.06em;
+    margin-bottom: 24px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 16px;
+}
+
+.service-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow: hidden;
+}
+
+.service-info h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+.service-meta {
+    display: flex;
+    gap: 12px;
+}
+
+.service-meta span {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 300;
+}
+
+.service-card button {
+    height: 38px;
+    padding: 0 20px;
+    background: #fff;
+    color: #111;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.service-card button:hover { opacity: 0.75; }
+.service-card button:active { opacity: 0.5; }
+
+@media (max-width: 400px) {
+    .service-card {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card button {
+        width: 100%;
+    }
+}
